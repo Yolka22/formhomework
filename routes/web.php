@@ -21,5 +21,6 @@ Route::get('/', function () {
 Route::get('/zooform', [FormController::class,"index"]);
 Route::post('/submit-form', [FormController::class, 'processForm']);
 
+Route::get('/home/stat', [ReviewController::class,"showHome"]);
 Route::get('/reviews', [ReviewController::class,"index"]);
 Route::post('/reviews', [ReviewController::class,"store"]);

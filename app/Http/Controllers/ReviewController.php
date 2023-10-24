@@ -12,6 +12,11 @@ class ReviewController extends Controller
         $reviews = Review::all(); // Отримуємо всі відгуки з бази даних
         return view('reviews', ['reviews' => $reviews]); // Передаємо відгуки в вигляд 'reviews'
     }
+    public function showHome()
+{
+    $reviews = Review::all();
+    return view('home', ['reviews' => $reviews]);
+}
 
     // Метод для збереження нового відгуку
     public function store(Request $request)

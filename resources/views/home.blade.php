@@ -7,7 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+    <ul>
+        @isset($reviews)
+            <li>Кількість відгуків: {{ $reviews->count() }}</li>
+            <li>Середня оцінка: {{ $reviews->avg('rate') }}</li>
+        @endisset
+    </ul>
+    
+    
     <a href="/reviews">reviews</a>
     <a href="/zooform">zooform</a>
+    <a href="/home/stat">stat</a>
+    <a href="/">home</a>
 </body>
 </html>
