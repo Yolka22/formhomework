@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 class FormController extends Controller
 {
+
+    public function index(){
+        return view('zooform');
+    }
+
     public function processForm(Request $request)
 {
 
